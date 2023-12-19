@@ -12,6 +12,7 @@ import {
 import { Loading } from "@/components/Loading";
 
 import { CityProvider } from "@/contexts/CityContext";
+import { colors } from "@/constants/Colors";
 
 export const unstable_settings = {
   // Ensure that reloading on `/modal` keeps a back button present.
@@ -48,7 +49,7 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   return (
-    <SafeAreaProvider style={{ flex: 1 }}>
+    <SafeAreaProvider style={{ flex: 1, backgroundColor: colors.gray[900] }}>
       <StatusBar
         backgroundColor="transparent"
         barStyle="light-content"
