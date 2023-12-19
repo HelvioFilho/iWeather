@@ -13,7 +13,7 @@ type InputProps = TextInputProps & {
 
 export function Input({ isLoading = false, ...rest }: InputProps) {
   return (
-    <View className="w-full h-9 bg-gray-600 rounded-lg px-5 flex-row">
+    <View className="w-full h-12 bg-gray-600 rounded-lg px-5 flex-row">
       <TextInput
         className="flex-1 font-regular text-base text-white"
         placeholderTextColor={colors.gray[400]}
