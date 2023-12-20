@@ -14,7 +14,7 @@ type SelectListProps = {
 
 export function SelectList(props: SelectListProps) {
   return (
-    <View className="w-full relative z-10">
+    <View className="w-full relative z-10 m-0">
       <Input
         placeholder={props.placeholder}
         onChangeText={props.onChange}
