@@ -30,7 +30,7 @@ export function WeatherItem({
         {title}
       </Text>
 
-      <Text className="font-bold text-base bg-gray-100">{value}</Text>
+      <Text className="font-bold text-base text-gray-100">{value}</Text>
     </View>
   );
 }
