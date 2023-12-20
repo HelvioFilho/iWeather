@@ -22,7 +22,10 @@ export function SelectList(props: SelectListProps) {
         value={props.value}
       />
 
-      <View className="absolute overflow-hidden rounded-lg top-16 left-0 right-0">
+      <View
+        testID="options"
+        className="absolute overflow-hidden rounded-lg top-16 left-0 right-0"
+      >
         {props.data.map((item) => (
           <TouchableOpacity
             key={item.latitude}
