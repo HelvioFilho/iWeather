@@ -1,7 +1,13 @@
+import "@/libs/dayjs";
+
 import { useEffect } from "react";
 import { StatusBar } from "react-native";
-import { SplashScreen, Stack } from "expo-router";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { SplashScreen, Stack, router } from "expo-router";
+import {
+  SafeAreaProvider,
+  SafeAreaView,
+  useSafeAreaInsets,
+} from "react-native-safe-area-context";
 import {
   useFonts,
   Nunito_400Regular,
@@ -13,6 +19,7 @@ import { Loading } from "@/components/Loading";
 
 import { CityProvider } from "@/contexts/CityContext";
 import { colors } from "@/constants/Colors";
+import { useCity } from "@/hooks/useCity";
 
 export const unstable_settings = {
   // Ensure that reloading on `/modal` keeps a back button present.
@@ -48,8 +55,21 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
+  const { city } = useCity();
+  const insets = useSafeAreaInsets();
+
+  useEffect(() => {
+    router.push("/dashboard");
+  }, [city]);
+
   return (
-    <SafeAreaProvider style={{ flex: 1, backgroundColor: colors.gray[900] }}>
+    <SafeAreaProvider
+      style={{
+        flex: 1,
+        paddingTop: insets.top,
+        backgroundColor: colors.gray[900],
+      }}
+    >
       <StatusBar
         backgroundColor="transparent"
         barStyle="light-content"
