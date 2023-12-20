@@ -26,7 +26,7 @@ export function WeatherToday({ weather, city }: Props) {
 
   return (
     <ImageBackground
-      className="bg-gray-700 p-5 rounded-lg justify-between overflow-hidden"
+      className="bg-gray-700 p-5 mt-3 rounded-lg justify-between overflow-hidden"
       resizeMode="cover"
       source={bgImg}
     >
@@ -38,7 +38,7 @@ export function WeatherToday({ weather, city }: Props) {
 
       <View className="w-full flex-row">
         <View className="flex-1 justify-end mb-4">
-          <Text className="font-extraBold text-5xl text-gray-white">
+          <Text className="font-extraBold text-[44px] text-white">
             {weather.temp}
           </Text>
 
