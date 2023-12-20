@@ -77,7 +77,7 @@ export default function Dashboard() {
   }
 
   return (
-    <View className="flex-1 bg-gray-900 p-5 pb-0 gap-8">
+    <View className="flex-1 bg-gray-900 p-5 pb-0 gap-1">
       <SelectList
         data={cities}
         value={search}
