@@ -8,7 +8,11 @@ type LoadingProps = {
 export function Loading({ size = "small" }: LoadingProps) {
   return (
     <View className="flex-1 items-center justify-center bg-gray-900">
-      <ActivityIndicator color={colors.blue.light} size={size} />
+      <ActivityIndicator
+        testID="loading"
+        color={colors.blue.light}
+        size={size}
+      />
     </View>
   );
 }
