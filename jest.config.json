@@ -21,12 +21,13 @@
     "./src/@types",
     "./src/assets",
     "./src/constants",
-    "./__tests__/coverage"
+    "./src/libs",
+    "./src/__tests__/coverage"
   ],
   "testPathIgnorePatterns": [
-    "./__tests__/mocks",
-    "./__tests__/utils",
-    "./__tests__/coverage"
+    "./src/__tests__/mocks",
+    "./src/__tests__/utils",
+    "./src/__tests__/coverage"
   ],
-  "coverageDirectory": "./__tests__/coverage"
+  "coverageDirectory": "./src/__tests__/coverage"
 }
